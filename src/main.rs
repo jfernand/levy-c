@@ -1,10 +1,10 @@
 #![allow(dead_code, unused_variables)]
-use dragon_curve::Sym::*;
+use levy_c::Sym::*;
 use glam::Vec2;
 use std::collections::HashMap;
 use tiny_skia::{LineJoin, Paint, Path, PathBuilder, Pixmap, Stroke, Transform};
-use dragon_curve::*;
-use dragon_curve::DrawingCommand::{LineTo, MoveTo};
+use levy_c::*;
+use levy_c::DrawingCommand::{LineTo, MoveTo};
 // dragon
 // angle = 90
 // START = FX+FX+
