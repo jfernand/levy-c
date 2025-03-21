@@ -53,20 +53,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
     };
     let mut pixmap = Pixmap::new(960*2, 960).ok_or("Can't init pixmap")?;
     pixmap.stroke_path(&path, &paint, &stroke, Transform::identity(), None);
-    pixmap.save_png("image.png")?;
+    pixmap.save_png("levy_c.png")?;
     Ok(())
 }
-
-// fn render_to_pixbuffer(mut pb: PathBuilder, commands: Vec<DrawingCommand>) -> Path {
-//     let pb = PathBuilder::new();
-//     for command in commands {
-//         match command {
-//             LineTo(x, y) => pb.line_to(x, y),
-//             MoveTo(x, y) => pb.move_to(x, y),
-//         }
-//     }
-//     pb.finish().unwrap()
-// }
 
 trait Renderer<I,O> {
     fn render(&mut self, commands: Vec<I>) -> O;
